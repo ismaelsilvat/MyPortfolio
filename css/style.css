@@ -18,9 +18,16 @@ header{
     display: flex;
     align-items: center;  
     justify-content: space-between;  
-    padding: 0 10vw;
+    padding: 0 15vw;
     position: relative;
     border-bottom: 3px groove #A6142F;
+}
+
+header h1{
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-style: oblique;
+    color: #F2F2F2;
 }
 
 .img-perfil{
@@ -264,7 +271,7 @@ nav ul li a{
     width: 42%;
     height: 100%;
     color: #262626;
-    background-color: #191919;
+    background-color: #141414;
     z-index: -1;
 }
 
@@ -299,6 +306,7 @@ nav ul li a{
 .experiencia{
     display: flex;
     align-items: center;
+    margin-bottom: 8vw;
 }
 
 .experiencia h1{
@@ -306,6 +314,7 @@ nav ul li a{
     margin-top: 5vw;
     color: #F2F2F2;
     text-align: right;
+    font-size: 2.5rem;
 }
 
 .experiencias{
@@ -411,7 +420,6 @@ footer h4{
 .footer-col ul li a {
     width: 25%;
     font-size: 1.1rem;
-    font-family: 'Bebas Neue', cursive;
     text-transform: capitalize;
     color: #bbbbbbe5;
     text-decoration: none;
@@ -450,7 +458,67 @@ footer h4{
 
 footer h4 i{
     font-size: 1.8rem;
+}
 
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    color: #F2F2F2;
+}
+
+.portfolio .title{
+    font-size: 2.5rem;
+}
+
+.materias{
+    width: 97%;
+    margin: 2vw auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.materias > .materia{
+    flex:  0 0 26%;
+}
+
+.materia{
+    min-height: 100%;
+    margin: 1vw auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.materia h2, .materia a{
+    width: 100%;
+    height: 10%;
+    padding-top: .1vw;
+}
+
+.materia a, .materia a i{
+    color: #c21a38;
+    font-size: .85rem;
+}
+
+.materia .img{
+    height: 90%;
+    display: flex;
+    padding: 2.5vw 1.1vw;
+    background-color: #151515;
+}
+
+.materia img{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 }
 
  
