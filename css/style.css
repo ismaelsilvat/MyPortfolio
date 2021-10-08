@@ -123,7 +123,12 @@ i{
 
 #checkbox-menu:checked ~ nav ul li:nth-child(4){
     animation: li 400ms ease forwards;
-    animation-delay: 1030ms;
+    animation-delay: 870ms;
+}
+
+#checkbox-menu:checked ~ nav ul li:nth-child(5){
+    animation: li 400ms ease forwards;
+    animation-delay: 1170ms;
 }
 
 /* END-CHECK-BOX MENU RESPONSIVO */
@@ -131,10 +136,10 @@ i{
 nav{
     position: absolute;
     top: 104%;
-    right: 7.5%;
+    right: 9%;
     visibility: hidden;
     transition: all 300ms ease;
-    background-color: rgba(13, 13, 13,);
+    background-color: rgba(13, 13, 13);
     border: 4px groove rgb(141, 17, 40);
 }
 
@@ -159,7 +164,7 @@ nav ul li{
 }
 
 nav ul li a{
-    padding: 0 .1vw;
+    padding: 0 .5vw;
     text-align: right;
     color: #F2F2F2; 
     font-family: 'Roboto Mono', monospace;
@@ -167,23 +172,31 @@ nav ul li a{
     font-size: 1.05rem;
     letter-spacing: 1px;
     padding-bottom: 2px;
+    transition: all 300ms ease;
+}
+
+nav ul li a:hover{
+    letter-spacing: 2px;
 }
 
 @keyframes dropdown{
     0%{
         height: 0;
     }
-    25%{
+    20%{
         height: 50px;
     }
-    50%{
+    40%{
         height: 100px;
     }
-    75%{
+    60%{
         height: 150px;
     }
+    80%{
+        height: 200px;
+    }
     100%{
-        height: 210px;
+        height: 260px;
     }
 }
 
@@ -358,6 +371,132 @@ nav ul li a{
     text-align: center;
 }
 
+.portfolio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    color: #F2F2F2;
+}
+
+.portfolio .title{
+    font-size: 2.5rem;
+}
+
+.materias{
+    width: 97%;
+    height: 100%;
+    margin-bottom: 2vw;
+    margin-top: 1vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.materias > .materia{
+    flex:  0 0 26%;
+}
+
+.materia{
+    margin: .5vw auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.materia h2, .materia a{ 
+    height: 10%;
+    padding-top: .05vw;
+    transition: all 300ms ease;
+}
+
+.materia h2:hover, .materia a:hover, .imagem a:hover{
+    letter-spacing: 1px;
+    color: #c21a38;
+}
+
+.materia a, .materia a i{
+    color: #c21a38;
+    font-size: .85rem;
+    font-weight: bold;
+}
+
+.materia .img{
+    height: 90%;
+    display: flex;
+    padding: 2.5vw 1.1vw;
+    background-color: #151515;
+}
+
+.materia img{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.projetos{
+    width: 100%;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    display: flex;
+    flex-direction: column;
+    color: #F2F2F2;
+    text-align: center;
+}
+
+.projeto{
+    width: 93%;
+    margin: 1vw auto;
+    padding: 1vw;
+    display: flex;
+    align-items: center;
+    color: #F2F2F2;
+    background-color: #111;
+    border: 2px groove #c21a38;
+}
+
+.projeto h1{
+    width: 20%;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    
+}
+
+.projeto p{
+    width: 55%;
+    padding: 0 1vw;
+    text-align: justify;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.imagem{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagem img{
+    max-width: 100%;
+    width: 100%;
+    height: 90%;
+    max-height: 90%;
+}
+
+.imagem a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #c21a39d7;
+    margin: .5vw;
+    transition: all 300ms ease;
+}
+
 footer {
     background-color: #151515;
     padding: 1vw;
@@ -452,136 +591,133 @@ footer h4{
 }
 
 .redes i{
+    margin: 0 .5vw;
     font-size: 1.5rem;
     color: #555;
     text-align: right;
+    transition: all 300ms ease;
+}
+
+.redes i:hover{
+    color: #c21a38;
 }
 
 footer h4 i{
     font-size: 1.8rem;
 }
 
-.portfolio{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Roboto Mono', monospace;
-    color: #F2F2F2;
+
+@media only screen and (max-width: 992px){
+
+    nav ul li a{
+        padding: 0 .05vw;
+    }
+
+    .container-apresentacao{
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15vw;
+    }
+
+    .foto{
+        width: auto;
+    }
+
+    .texto, .texto p{
+        width: 95%;
+    }
+
+    .portfolio{
+        height: auto;
+        margin-bottom: 5vw;
+    }
+
+    .materias > .materia {
+        flex: 0 0 48%;
+    }
 }
 
-.portfolio .title{
-    font-size: 2.5rem;
-}
+@media only screen and (max-width: 768px){
+    header{
+        padding: 0 10vw;
+    }
 
-.materias{
-    width: 97%;
-    height: 100%;
-    margin-bottom: 2vw;
-    margin-top: 1vw;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
+    .projeto{
+        flex-direction: column;
+    }
 
-.materias > .materia{
-    flex:  0 0 26%;
-}
+    .projeto h1, .projeto p{
+        width: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
 
-.materia{
-    margin: .5vw auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    .imagem{
+        width: 40%;
+        margin-top: 1.5vw;
+    }
 
-.materia h2, .materia a{
-    width: 100%;
-    height: 10%;
-    padding-top: .05vw;
-}
+    .footer-container{
+        width: 90%;
+    }
 
-.materia a, .materia a i{
-    color: #c21a38;
-    font-size: .75rem;
-    font-weight: bold;
-}
-
-.materia .img{
-    height: 90%;
-    display: flex;
-    padding: 2.5vw 1.1vw;
-    background-color: #151515;
-}
-
-.materia img{
-    max-width: 100%;
-    max-height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-}
-
-.projetos{
-    width: 100%;
-    margin-top: 4vw;
-    margin-bottom: 4vw;
-    display: flex;
-    flex-direction: column;
-    color: #F2F2F2;
-    text-align: center;
-}
-
-.projeto{
-    width: 93%;
-    margin: 1vw auto;
-    padding: 1vw;
-    display: flex;
-    align-items: center;
-    color: #F2F2F2;
-    background-color: #111;
-    border: 2px groove #c21a38;
-}
-
-.projeto h1{
-    width: 20%;
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
     
 }
 
-.projeto p{
-    width: 55%;
-    padding: 0 1vw;
-    text-align: justify;
-    font-size: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
+@media only screen and (max-width: 600px){
+
+    header{
+        padding: 0 7vw;
+    }
+
 }
 
-.imagem{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media only screen and (max-width: 456px){
+
+    header{
+        padding: 0 5vw;
+    }
+
+    .footer-container{
+        width: 95%;
+    }
+
+    
+    .cursos{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso{
+        width: 75%;
+        height: 33%;
+    }
+
+    .experiencia, .experiencia h1{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    
+    
+    .experiencias{
+        width: 100%;
+    }
+
+    .experiencias > .experienciaP {
+        flex: 0 0 70%;
+    }
+
+    .materias > .materia {
+        flex: 0 0 75%;
+    }
 }
 
-.imagem img{
-    max-width: 100%;
-    width: 100%;
-    height: 90%;
-    max-height: 90%;
-}
 
-.imagem a{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #c21a39d7;
-    margin: .5vw;
-}
+
+
 
  
 
