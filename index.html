@@ -14,7 +14,7 @@
     <link rel="icon" href="/img/Icon.png">
     <title>Cúrriculo pessoal</title>
 </head>
-<body>
+<body class="body">
     <header>
         <i class="fas fa-bolt"></i>
         <h1>Portfólio</h1>
@@ -31,6 +31,7 @@
                 <li><a href="index.html#formacao">Formação</a></li>
                 <li><a href="index.html#appPessoal">Apresentação pessoal</a></li>
                 <li><a href="index.html#expProfissional">Experiência profissional</a></li>
+                <li><a href="index.html#cronograma">Cronograma</a></li>
             </ul>
         </nav>
     </header>
@@ -98,6 +99,18 @@
         </div>
     </div>
 
+    <div class="cronograma" id="cronograma">
+        <h2 class="title">Cronograma</h2>
+        <img id="imgCronograma" src="./img/cronograma.jpg" alt="">
+        <a href="javascript:expandir()">Ver imagem</a>
+    </div>
+    <img id="imgCronograma2" src="./img/cronograma.jpg" alt="" style="display: none;">
+    <div class="X">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
     <div class="portfolio" id="portfolio">
         <h2 class="title">Projetos</h2>
         <div class="materias">
@@ -139,6 +152,67 @@
         </div>
     </div>
 
+    
+
+
+    <div class="portfolio2020">
+        <h2 class="title">Portfólio 2020 - 1° ano</h2>
+        <iframe name="iframe1" class="iframe1" id="iframe1" onload="" loading="lazy" style="background-color: #262626 !important;" src="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAEIzsfEer8&#x2F;view?embed">
+
+            <script>
+
+
+window.onload = function () {
+
+
+    let teste = document.getElementsByClassName("CoORvg")
+                       console.log('oi ', teste);
+}
+
+                
+               
+       
+           </script>
+       
+
+        </iframe>
+    </div>
+
+    <div class="atividadesOrientadas">
+        <h1 class="title">Atividades Orientadas</h1>
+        <div class="container-atividades">
+            <div class="atividadeOrientada">
+                <h1>Simulados</h1>
+                <div class="imgAtividade" id="slider">
+
+                    <img class="img1 active" src="./img/Simulado1.png" alt="">
+                    <img class="img2" src="./img/Simulado2.png" alt="">
+
+                    <div class="controls-Master">
+                        <div class="prevMaster">
+                            <span> < </span>
+        
+                        </div>
+                        <div class="nextMaster">
+                            <span> > </span>
+                        </div>
+                    </div>
+            
+                    <div id="indicatorMaster" class="indicatorMaster"></div>
+
+                </div>
+            </div>
+            <div class="atividadeOrientada">
+                <h1>JESS</h1>
+               
+                <div class="imgAtividade">
+                    <img src="./img/Tiltados.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <footer>
         <div class="footer-container">
@@ -147,6 +221,7 @@
                 <div class="redes">
                     <a href="https://www.instagram.com/ismaelsilvat/"><i class="fab fa-instagram"></i></a>
                     <a href="https://api.whatsapp.com/send?phone=048991891499"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/ismael-teixeira-da-silva/"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/Ismael-back"><i class="fab fa-github"></i></a>
                 </div>
                 <h4><i class="fas fa-user-secret"></i>by Ismael</h2>
@@ -154,7 +229,42 @@
         </div>
     </footer>
 
+    <script>
+
+
+
+    
+
+         window.onload = carregou
+
+         function carregou(){
+
+         
+                let teste = document.getElementsByClassName("CoORvg")
+                console.log('oi ', teste);
+        
+         
+           //  document.querySelectorAll("body:not(.theme) .CoORvg").style.background = "black";
+         }
+    </script>
+
     <script src="./js/script.js"></script>
+    <script type="module" src="./node_modules/js-cookie/dist/js.cookie.mjs">
+        import Cookies from '../node_modules/js-cookie/dist/js.cookie.mjs'
+
+        document.cookie.split(';').map(cookie => {
+    const _cookie = cookie.split('=')
+    Cookies.set(_cookie[0], _cookie[1], { sameSite: 'None' })
+   })
+
+var frm = frames['iframe1'].document;
+var otherhead = frm.getElementsByTagName("head")[0];
+var link = frm.createElement("link");
+link.setAttribute("rel", "stylesheet");
+link.setAttribute("type", "text/css");
+link.setAttribute("href", "./css/style.css");
+otherhead.appendChild(link);
+    </script>
 </body>
 </html>
 

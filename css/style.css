@@ -6,10 +6,15 @@
     text-decoration: none;
 }
 
+a, h2{
+    transition: all 300ms ease;
+}
+
 body{
     font-size: 100%;
     background-color: #0D0D0D;
     overflow-x: hidden;
+    position: relative;
 }
 
 header{
@@ -107,27 +112,32 @@ i{
 }
 
 #checkbox-menu:checked ~ nav ul li:nth-child(1){
-    animation: li 400ms ease forwards;
-    animation-delay: -30ms;
+    animation: li 600ms ease forwards;
+    animation-delay: -150ms;
 }
 
 #checkbox-menu:checked ~ nav ul li:nth-child(2){
-    animation: li 400ms ease forwards;
-    animation-delay: 330ms;
+    animation: li 600ms ease forwards;
+    animation-delay: 150ms;
 }
 
 #checkbox-menu:checked ~ nav ul li:nth-child(3){
-    animation: li 400ms ease forwards;
-    animation-delay: 630ms;
+    animation: li 600ms ease forwards;
+    animation-delay: 330ms;
 }
 
 #checkbox-menu:checked ~ nav ul li:nth-child(4){
-    animation: li 400ms ease forwards;
-    animation-delay: 870ms;
+    animation: li 600ms ease forwards;
+    animation-delay: 630ms;
 }
 
 #checkbox-menu:checked ~ nav ul li:nth-child(5){
-    animation: li 400ms ease forwards;
+    animation: li 600ms ease forwards;
+    animation-delay: 870ms;
+}
+
+#checkbox-menu:checked ~ nav ul li:nth-child(6){
+    animation: li 600ms ease forwards;
     animation-delay: 1170ms;
 }
 
@@ -172,7 +182,6 @@ nav ul li a{
     font-size: 1.05rem;
     letter-spacing: 1px;
     padding-bottom: 2px;
-    transition: all 300ms ease;
 }
 
 nav ul li a:hover{
@@ -183,20 +192,23 @@ nav ul li a:hover{
     0%{
         height: 0;
     }
-    20%{
+    17%{
         height: 50px;
     }
-    40%{
+    34%{
         height: 100px;
     }
-    60%{
+    51%{
         height: 150px;
     }
-    80%{
+    68%{
         height: 200px;
     }
-    100%{
+    82%{
         height: 260px;
+    }
+    100%{
+        height: 300px;
     }
 }
 
@@ -321,6 +333,7 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     margin-bottom: 8vw;
+    position: relative;
 }
 
 .experiencia h1{
@@ -373,16 +386,19 @@ nav ul li a:hover{
 
 .portfolio{
     height: 100vh;
+    margin: 0 0 4vw 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Roboto Mono', monospace;
     color: #F2F2F2;
 }
 
-.portfolio .title{
+.title{
+    font-family: 'Roboto Mono', monospace;
     font-size: 2.5rem;
+    color: #F2F2F2;
+    text-align: center;
 }
 
 .materias{
@@ -398,7 +414,7 @@ nav ul li a:hover{
 }
 
 .materias > .materia{
-    flex:  0 0 26%;
+    flex:  0 1 26%;
 }
 
 .materia{
@@ -410,10 +426,9 @@ nav ul li a:hover{
 .materia h2, .materia a{ 
     height: 10%;
     padding-top: .05vw;
-    transition: all 300ms ease;
 }
 
-.materia h2:hover, .materia a:hover, .imagem a:hover{
+.materia h2:hover, a:hover{
     letter-spacing: 1px;
     color: #c21a38;
 }
@@ -440,6 +455,16 @@ nav ul li a:hover{
 }
 
 .projetos{
+    width: 100%;
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    display: flex;
+    flex-direction: column;
+    color: #F2F2F2;
+    text-align: center;
+}
+
+.escolhidosAluno{
     width: 100%;
     margin-top: 4vw;
     margin-bottom: 4vw;
@@ -497,9 +522,216 @@ nav ul li a:hover{
     transition: all 300ms ease;
 }
 
+.cronograma{ 
+    width: 87%;
+    max-height: 97vh;
+    margin: auto;
+    margin-bottom: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2vw;
+    background-color: #121212;
+    border-radius: 150px 15px 100px 15px;
+    -moz-border-radius: 150px 15px 100px 15px;
+    -webkit-border-radius: 100px 15px 100px 15px;
+    -webkit-box-shadow: 0px 0px 7px 4px #c21a38; 
+    box-shadow: 0px 0px 7px 4px #c21a38;
+}
+
+.cronograma img{
+    max-width: 100%;
+    margin: 1vw;
+    object-fit: fill;
+}
+
+#imgCronograma2{
+    animation: animate 1s ease forwards;
+    position: fixed;
+    right: 0;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 999; 
+    height: 90vh; 
+    margin: auto; 
+    opacity: 1;
+}
+
+.X{
+    width: 50px;
+    height: 15px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    z-index: 999;
+    cursor: pointer;
+    animation: animate 2s ease forwards;
+}
+
+.X span{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.X span:nth-child(1){
+    background: #A6142F;
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+.X span:nth-child(2){
+    opacity: 0;
+    display: none;
+}
+
+.X span:nth-child(3){
+    background: #A6142F;
+    transform: rotate(45deg);
+}
+
+@keyframes animate{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.cronograma a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #c21a39d7;
+}
+
+.portfolio2020{
+    width: 95%;
+    height: 95vh;
+    margin: auto;
+    padding-top: 1vw;
+    border-radius: 10px 10px 25px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+    will-change: transform;
+    background-color: #151515;
+    -webkit-box-shadow: 0px 0px 7px 4px #c21a38; 
+    box-shadow: 0px 0px 7px 4px #c21a38;
+}
+
+.portfolio2020 iframe{
+    width: 100%;
+    height: 100%; 
+    margin-top: 1vw;
+    border-radius: 0 0 25px 25px;
+    border: 0;
+    padding: 0; 
+    background-color: #262626 !important;
+}
+
+.atividadesOrientadas{
+    height: 100vh;
+    margin: 4vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-atividades{
+    width: 100%;
+    height: 75vh;
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.atividadeOrientada{
+    position: relative;
+    width: 50%;
+    height: 80%;
+    padding: 1vw;
+    margin: 3vw;
+    -webkit-box-shadow: 0px 0px 4px 3px #c21a38; 
+    box-shadow: 0px 0px 4px 3px #c21a38;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgAtividade{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
+}
+
+.imgAtividade img{
+    max-width: 90%;
+    min-width: 90%;
+    width: 90%;
+    height: 95%;
+    max-height: 95%;
+    min-height: 95%;
+    text-align: center;
+    display: flex;
+    object-fit: fill;
+}
+
+#slider img{
+    display: none;
+}
+
+.imgAtividade .active{
+    display: flex !important;
+}
+
+.controls-Master{
+    position: absolute;
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-25%);
+}
+
+.prevMaster, .nextMaster{
+    width: 30px;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c21a38;
+    border: 2px groove black;
+    color: #121212;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    transition: all 300ms ease;
+}
+
+.prevMaster:hover, .nextMaster:hover{
+    background-color: #f2f2f2;
+    color: #c21a38;
+}
+
 footer {
     background-color: #151515;
     padding: 1vw;
+    margin-top: 3vw;
 }
 
 footer i{
@@ -587,7 +819,7 @@ footer h4{
 }
 
 .redes{
-    margin-left: 4.8vw;
+    margin-left: 2.8vw;
 }
 
 .redes i{
@@ -633,8 +865,9 @@ footer h4 i{
         margin-bottom: 5vw;
     }
 
-    .materias > .materia {
-        flex: 0 0 48%;
+    .cronograma{
+        width: 97%;
+        border-radius: 100px 0px 50px 0px;
     }
 }
 
@@ -654,7 +887,7 @@ footer h4 i{
     }
 
     .imagem{
-        width: 40%;
+        width: 95%;
         margin-top: 1.5vw;
     }
 
@@ -679,6 +912,12 @@ footer h4 i{
         padding: 0 5vw;
     }
 
+    header nav{
+        right: 50%;
+        transform: translateX(50%);
+        width: 80%;
+    }
+
     .footer-container{
         width: 95%;
     }
@@ -700,10 +939,15 @@ footer h4 i{
         width: 100%;
         text-align: center;
     }
+
+    .experiencia h1{
+        margin-top: 15vw;
+    }
     
     
     .experiencias{
         width: 100%;
+        margin-top: 15vw;
     }
 
     .experiencias > .experienciaP {
@@ -713,13 +957,20 @@ footer h4 i{
     .materias > .materia {
         flex: 0 0 75%;
     }
+
+    .cronograma{
+        margin-top: 15vw;
+        height: 70vh;
+        border-radius: 100px 0px 50px 0px;
+        -webkit-border-radius: 50px 0px 50px 0px;
+        -moz-border-radius: 100px 0px 50px 0px;
+    }
+
+    .portfolio2020{
+        margin-top: 15vw;
+        padding-top: 3vw;
+    }
 }
-
-
-
-
-
- 
 
 
  
