@@ -701,8 +701,7 @@ nav ul li a:hover{
 }
 
 .imgAtividade img{
-    width: 97%;
-    height: 80%;
+    width: 80%;
     text-align: center;
     display: flex;
     object-fit: fill;
@@ -718,7 +717,7 @@ nav ul li a:hover{
 
 .controls-Master{
     position: absolute;
-    width: 93%;
+    width: 84%;
     display: flex;
     justify-content: space-between;
     top: 50%;
