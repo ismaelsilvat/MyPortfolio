@@ -18,14 +18,33 @@ body{
 }
 
 header{
+    position: relative;
     margin: auto;
+    width: 100%;
     height: 11vh;
     display: flex;
     align-items: center;  
     justify-content: space-between;  
     padding: 0 15vw;
-    position: relative;
     border-bottom: 3px groove #A6142F;
+    transition: all 500ms ease;
+}
+
+.header-fixo{
+    position: fixed !important;
+    width: 100%;
+    background-color: #0D0D0D;
+    z-index: 999;
+    animation: height 500ms ease forwards;
+}
+
+@keyframes height{
+    from{
+        height: 0%;
+    }
+    to{
+        height: 11vh;
+    }
 }
 
 header h1{
@@ -554,6 +573,8 @@ nav ul li a:hover{
     top: 50%; 
     transform: translateY(-50%);
     z-index: 999; 
+    max-width: 95%;
+    min-width: 95%;
     height: 90vh; 
     margin: auto; 
     opacity: 1;
@@ -1023,6 +1044,10 @@ footer h4 i{
     .prevMaster, .nextMaster{
         width: 20px;
         height: 5vh;
+    }
+
+    #imgCronograma2{
+        height: auto;
     }
     
 }

@@ -1,10 +1,7 @@
-// window.onload = mudarCor();
-
-// function mudarCor(){
-    
-
-
-// }]
+window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+    header.classList.toggle("header-fixo", window.scrollY > 105);
+})
 
 function expandir(){
     document.querySelector(".X").style.cssText = "display: flex;"
@@ -12,6 +9,8 @@ function expandir(){
     document.querySelector("body").style.cssText = "overflow: hidden;";
     document.querySelector(".cronograma").style.cssText = "opacity: 0";
     document.querySelector(".portfolio2020").style.cssText = "opacity: 0";
+    document.querySelector(".portfolio").style.cssText = "opacity: 0";
+
 }
 
 let X = document.querySelector(".X")
@@ -22,19 +21,9 @@ X.addEventListener('click',function() {
     document.querySelector("body").style.cssText = "overflow: visible;";
     document.querySelector(".cronograma").style.cssText = "opacity: 1";
     document.querySelector(".portfolio2020").style.cssText = "opacity: 1";
+    document.querySelector(".portfolio").style.cssText = "opacity: 1";
+
 })
-
-// document.cookie = "SameSite=None; Secure";
-
-
-
-//    var cssLink = document.createElement("link");
-//    cssLink.href = "./css/style.css"; 
-//    cssLink.rel = "stylesheet"; 
-//    cssLink.type = "text/css"; 
-//    frames['iframe1'].document.head.appendChild(cssLink);
-
-
     
 let indexMaster = 0
 
@@ -46,13 +35,11 @@ const prevMaster = document.querySelector(".prevMaster");
 
 const nextMaster = document.querySelector(".nextMaster");
 
-
 prevMaster.addEventListener("click", function() {
 
     prevSlideMaster();
 
 })
-
 
 nextMaster.addEventListener("click", function() {
 
@@ -76,7 +63,6 @@ function nextSlideMaster() {
         indexMaster++
     }
 
-    
     changeSlideMaster();
 }
 
@@ -86,6 +72,3 @@ function changeSlideMaster() {
     }
     slidesMaster[indexMaster].classList.add("active")
 }
-
-
-console.log(slidesMaster);
