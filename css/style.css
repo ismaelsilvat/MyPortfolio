@@ -701,12 +701,8 @@ nav ul li a:hover{
 }
 
 .imgAtividade img{
-    max-width: 90%;
-    min-width: 90%;
-    width: 90%;
-    height: 95%;
-    max-height: 95%;
-    min-height: 95%;
+    width: 97%;
+    height: 80%;
     text-align: center;
     display: flex;
     object-fit: fill;
