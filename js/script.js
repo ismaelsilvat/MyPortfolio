@@ -10,6 +10,7 @@ function expandir(){
     document.querySelector(".cronograma").style.cssText = "opacity: 0";
     document.querySelector(".portfolio2020").style.cssText = "opacity: 0";
     document.querySelector(".portfolio").style.cssText = "opacity: 0";
+    document.querySelector(".header-fixo").style.cssText = "opacity: 0";
 
 }
 
@@ -22,6 +23,8 @@ X.addEventListener('click',function() {
     document.querySelector(".cronograma").style.cssText = "opacity: 1";
     document.querySelector(".portfolio2020").style.cssText = "opacity: 1";
     document.querySelector(".portfolio").style.cssText = "opacity: 1";
+    document.querySelector(".header-fixo").style.cssText = "opacity: 1";
+
 
 })
     

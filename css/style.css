@@ -43,7 +43,7 @@ header{
         height: 0%;
     }
     to{
-        height: 11vh;
+        height: 8vh;
     }
 }
 
@@ -573,9 +573,10 @@ nav ul li a:hover{
     top: 50%; 
     transform: translateY(-50%);
     z-index: 999; 
-    max-width: 95%;
-    min-width: 95%;
-    height: 90vh; 
+    max-width: 90%;
+    min-width: 90%;
+    padding: 0 13vw;
+    height: 70vh; 
     margin: auto; 
     opacity: 1;
 }
@@ -701,7 +702,7 @@ nav ul li a:hover{
 }
 
 .imgAtividade img{
-    width: 80%;
+    max-width: 60%;
     text-align: center;
     display: flex;
     object-fit: fill;
@@ -717,7 +718,7 @@ nav ul li a:hover{
 
 .controls-Master{
     position: absolute;
-    width: 84%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     top: 50%;
@@ -725,11 +726,12 @@ nav ul li a:hover{
 }
 
 .prevMaster, .nextMaster{
-    width: 30px;
-    height: 15vh;
+    width: 67px;
+    height: 7vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
     background-color: #c21a38;
     border: 2px groove black;
     color: #121212;
@@ -947,7 +949,8 @@ footer h4 i{
     }
     
     .prevMaster, .nextMaster{
-        height: 10vh;
+        width: 45px;
+        height: 4vh;
     }
 
 }
@@ -1037,8 +1040,8 @@ footer h4 i{
     }
         
     .prevMaster, .nextMaster{
-        width: 20px;
-        height: 5vh;
+        width: 30px;
+        height: 3vh;
     }
 
     #imgCronograma2{
